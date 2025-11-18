@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sportlight Media | Premier Media Consulting Company in Nigeria</title>
+    <meta name="description" content="Sportlight Media - Nigeria's leading sports-focused media consulting company. We deliver world-class PR, digital strategy, content creation, broadcasting support, and brand partnerships for sports organizations, athletes, and events.">
+
+    <!-- Bootstrap 5.3.3 + AOS Animation -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+
+    <style>
+        :root {
+            --primary: #ff6b00;
+            --dark: #1a1a1a;
+            --light: #f8f9fa;
+            --gray: #333;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            line-height: 1.7;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5 {
+            font-weight: 800;
+            color: var(--dark);
+        }
+
+        .navbar {
+            background: rgba(26, 26, 26, 0.95);
+            backdrop-filter: blur(10px);
+            transition: all 0.4s ease;
+        }
+
+        .navbar.scrolled {
+            background: rgba(26, 26, 26, 0.98);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .navbar-brand {
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: var(--primary) !important;
+        }
+
+        .nav-link {
+            color: white !important;
+            font-weight: 600;
+            margin: 0 15px;
+            position: relative;
+            transition: all 0.3s;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 3px;
+            bottom: -6px;
+            left: 50%;
+            background: var(--primary);
+            transition: all 0.4s;
+            transform: translateX(-50%);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        #hero {
+            height: 100vh;
+            min-height: 650px;
+            background: linear-gradient(135deg, rgba(255,107,0,0.9), rgba(26,26,26,0.95)), url('https://images.unsplash.com/photo-1540747913346-19e32dc41097?q=80&w=2000&auto=format&fit=crop') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        .hero-content h1 {
+            font-size: 4.5rem;
+            color: white;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-content .lead {
+            font-size: 1.4rem;
+            max-width: 700px;
+            color: #eee;
+            margin-bottom: 2.5rem;
+        }
+
+        .btn-primary-custom {
+            background: white;
+            color: var(--primary);
+            padding: 14px 40px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.4s;
+            border: none;
+        }
+
+        .btn-primary-custom:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+            background: #f8f9fa;
+        }
+
+        /* Sections */
+        section {
+            padding: 100px 0;
+        }
+
+        .section-title {
+            font-size: 3rem;
+            margin-bottom: 3rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            width: 80px;
+            height: 5px;
+            background: var(--primary);
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 3px;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 15px;
+            padding: 40px 30px;
+            height: 100%;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            transition: all 0.4s ease;
+            border: 1px solid #eee;
+        }
+
+        .service-card:hover {
+            transform: translateY(-20px);
+            box-shadow: 0 25px 50px rgba(255,107,0,0.15);
+        }
+
+        .service-icon {
+            font-size: 3.5rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
+
+        footer {
+            background: var(--dark);
+            color: #aaa;
+            padding: 60px 0 30px;
+        }
+
+        .footer-powered {
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 3rem;
+            }
+            .section-title {
+                font-size: 2.5rem;
+            }
+            section {
+                padding: 80px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Sportlight Media</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section id="hero" class="text-center text-lg-start">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8 mx-auto">
+                    <div class="hero-content" data-aos="fade-up" data-aos-duration="1200">
+                        <h1>Sportlight Media</h1>
+                        <p class="lead">Nigeria's Premier Sports Media Consulting Company Specializing in Sports PR, Digital Strategy, Content Creation & Brand Partnerships</p>
+                        <a href="#contact" class="btn btn-primary-custom shadow-lg">Work With Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <h2 class="section-title text-center text-lg-start">About Sportlight Media</h2>
+                    <p>Sportlight Media is Nigeria's foremost media consulting agency dedicated exclusively to the sports industry. Founded in Lagos, we bridge the gap between African sports talent and global audiences through strategic communication, innovative digital solutions, and powerful storytelling.</p>
+                    <p>We work with football clubs, athletes, federations, sponsors, and sports brands to amplify their voice, build unbreakable fan engagement, and create revenue-generating media strategies that win both on and off the pitch.</p>
+                    <p>From managing crisis communications during major tournaments to building multi-million-naira sponsorship deals through compelling content — we put the spotlight exactly where it belongs: on your success.</p>
+                </div>
+                <div class="col-lg-6 text-center" data-aos="fade-left">
+                    <img src="https://images.unsplash.com/photo-1575361208123-923fe832b09a?q=80&w=800&auto=format&fit=crop" alt="Sportlight Media Team" class="img-fluid rounded-4 shadow-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services">
+        <div class="container">
+            <h2 class="section-title text-center" data-aos="fade-up">Our Services</h2>
+            <div class="row g-5">
+                <div class="col-md-6 col-lg-4" data-aos="flip-left" data-aos-delay="100">
+                    <div class="service-card text-center">
+                        <div class="service-icon">📺</div>
+                        <h4>Media Relations & PR</h4>
+                        <p>Press releases, media training, crisis management, press conferences, and relationships with top Nigerian & international sports journalists.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="flip-left" data-aos-delay="300">
+                    <div class="service-card text-center">
+                        <div class="service-icon">🎯</div>
+                        <h4>Digital Strategy & Social Media</h4>
+                        <p>Growth strategies for Instagram, Twitter/X, TikTok, YouTube. Content calendars, community management, paid campaigns & analytics.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="flip-left" data-aos-delay="500">
+                    <div class="service-card text-center">
+                        <div class="service-icon">🎥</div>
+                        <h4>Content Creation</h4>
+                        <p>Professional video production, documentaries, highlight reels, podcasts, graphics, photography, and athlete personal branding content.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="flip-left" data-aos-delay="100">
+                    <div class="service-card text-center">
+                        <div class="service-icon">🤝</div>
+                        <h4>Sponsorship & Partnerships</h4>
+                        <p>Identifying, negotiating, and activating sponsorship deals. Deck creation, valuation reports, activation strategies.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="flip-left" data-aos-delay="300">
+                    <div class="service-card text-center">
+                        <div class="service-icon">📡</div>
+                        <h4>Broadcast & Event Coverage</h4>
+                        <p>Live commentary support, OB van coordination, streaming solutions, event media management, and post-event highlight packages.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="flip-left" data-aos-delay="500">
+                    <div class="service-card text-center">
+                        <div class="service-icon">🌟</div>
+                        <h4>Athlete Personal Branding</h4>
+                        <p>Building global personal brands for athletes — from social media presence to endorsement deals and legacy planning.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="bg-dark text-white">
+        <div class="container">
+            <h2 class="section-title text-center text-white" data-aos="zoom-in">Let's Illuminate Your Brand</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+                    <p class="text-center lead mb-5">Ready to take your sports brand to the next level? Get in touch today.</p>
+                    <div class="text-center">
+                        <p><strong>Email:</strong> hello@sportlightmedia.ng</p>
+                        <p><strong>Phone/WhatsApp:</strong>: +234 803 000 1111</p>
+                        <p><strong>Location:</strong> Victoria Island, Lagos, Nigeria</p>
+                        <a href="mailto:hello@sportlightmedia.ng" class="btn btn-primary-custom btn-lg mt-4">Send Message</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>&copy; 2025 Sportlight Media. All Rights Reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p>Powered by <span class="footer-powered">KBE Developers</span></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        // Navbar background on scroll
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 50) {
+                document.querySelector('.navbar').classList.add('scrolled');
+            } else {
+                document.querySelector('.navbar').classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>
